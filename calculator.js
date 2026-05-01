@@ -1,5 +1,6 @@
 const form = document.getElementById("absence-form");
-const totalClassesInput = document.getElementById("total-classes");
+const disciplineSelect = document.getElementById("discipline-select");
+const selectedTotalOutput = document.getElementById("selected-total-classes");
 const currentAbsencesInput = document.getElementById("current-absences");
 const percentOutput = document.getElementById("absence-percent");
 const maxOutput = document.getElementById("max-absences");
@@ -9,6 +10,21 @@ const noteOutput = document.getElementById("absence-note");
 const resultCard = document.querySelector(".result-card");
 
 const LIMIT_PERCENT = 15; // Limite fixo de 15%
+
+// Carga horaria fixa por disciplina neste semestre (pode ser ajustada depois).
+const DISCIPLINE_TOTAL_CLASSES = {
+  "CES-10": 64,
+  "CES-10 (L)": 32,
+  "MTP-03": 32,
+  "HUM-01": 48,
+  "QUI-18": 32,
+  "QUI-18 (L)": 48,
+  "MAT-13": 64,
+  "MAT-15": 32,
+  "MAT-17": 32,
+  "FND-01": 32,
+  "HUM-70": 48,
+};
 
 // Determina a cor baseada no percentual de faltas e limite
 function getColorStatus(percentage, isWithinLimit) {
@@ -37,7 +53,8 @@ function getColorStatus(percentage, isWithinLimit) {
 
 // Algoritmo executado ao 'atualizar' a calculadora
 function updateCalculator() {
-  const totalClasses = Math.max(0, Number(totalClassesInput.value) || 0);
+  const selectedDiscipline = disciplineSelect.value;
+  const totalClasses = DISCIPLINE_TOTAL_CLASSES[selectedDiscipline] || 0;
   const currentAbsences = Math.max(0, Number(currentAbsencesInput.value) || 0);
   const maxAbsences = Math.floor((totalClasses * LIMIT_PERCENT) / 100);
   const remainingAbsences = Math.max(maxAbsences - currentAbsences, 0);
@@ -45,6 +62,9 @@ function updateCalculator() {
     totalClasses > 0 ? (currentAbsences / totalClasses) * 100 : 0;
   const isWithinLimit = currentAbsences <= maxAbsences;
   const colorStatus = getColorStatus(percentage, isWithinLimit);
+
+  selectedTotalOutput.textContent = `Total no semestre: ${totalClasses} aulas`;
+  currentAbsencesInput.max = String(totalClasses);
 
   // Atualiza os valores
   percentOutput.textContent = `${percentage.toFixed(1)}%`;

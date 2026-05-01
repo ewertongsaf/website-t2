@@ -33,23 +33,33 @@
             <div class="page-badge">Calculadora de faltas</div>
             <h1>Calcule quantas faltas você ainda pode ter por disciplina</h1>
             <p>
-              Informe o total de aulas e as faltas registradas para ver o limite
-              de 15%.
+              Selecione a disciplina e informe as faltas registradas para ver o
+              limite de 15%.
             </p>
           </div>
 
           <div class="calculator-grid">
             <form class="calculator-card" id="absence-form">
               <label>
-                Total de aulas previstas
-                <input
-                  type="number"
-                  id="total-classes"
-                  min="1"
-                  step="1"
-                  value="40"
-                />
+                Disciplina
+                <select id="discipline-select">
+                  <option value="CES-10">CES-10</option>
+                  <option value="CES-10 (L)">CES-10 (L)</option>
+                  <option value="MTP-03">MTP-03</option>
+                  <option value="HUM-01">HUM-01</option>
+                  <option value="QUI-18">QUI-18</option>
+                  <option value="QUI-18 (L)">QUI-18 (L)</option>
+                  <option value="MAT-13">MAT-13</option>
+                  <option value="MAT-15">MAT-15</option>
+                  <option value="MAT-17">MAT-17</option>
+                  <option value="FND-01">FND-01</option>
+                  <option value="HUM-70">HUM-70</option>
+                </select>
               </label>
+
+              <p class="selected-total" id="selected-total-classes">
+                Total no semestre: 0 aulas
+              </p>
 
               <label>
                 Faltas registradas
