@@ -44,55 +44,8 @@ header h3 {
   transition: color 0.3s ease;
 }
 
-.hero {
-  background-color: #025e73;
-  padding-top: 100px;
-  padding-bottom: 150px;
-}
-
-.content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.botao {
-  background-color: #f2a71b;
-  display: inline-block;
-  padding: 10px 15px;
-  border-radius: 20px;
-  color: black;
-}
-
 h1 {
   font-family: outfit-bold;
   color: #e7e4e4;
   padding-top: 20px;
-}
-
-.content p {
-  color: #e7e4e4;
-  font-size: 1.2em;
-}
-
-.boxcontainer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-  width: 80%;
-  padding-top: 30px;
-}
-
-.box {
-  background-color: rgba(255, 255, 255, 0.121);
-  border-radius: 15px;
-  padding: 0px 40px;
-}
-
-.box h2 {
-  text-align: center;
-  color: white;
-}
-.box p {
-  text-align: center;
 }
