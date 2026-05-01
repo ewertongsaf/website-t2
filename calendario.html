@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendário | Website T2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="calendario.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <h3>Subturma T2</h3>
+        <div class="navbar">
+          <ul>
+            <!-- Links temporários para futuras páginas -->
+            <li><a href="index.html">Início</a></li>
+            <!-- Link para a Sobre implementado -->
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="index.html">Cronograma</a></li>
+            <li>
+              <a href="calendario.html" aria-current="page">Calendário</a>
+            </li>
+            <li><a href="index.html">Membros</a></li>
+            <li><a href="resources.html">Calculadora</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <section id="agenda" class="secao-da-agenda">
+      <div class="agenda-content">
+        <h1>Calendário da T2</h1>
+        <iframe
+          class="agenda"
+          src="https://calendar.google.com/calendar/embed?src=representante.da.t2%40gmail.com&ctz=America%2FRecife"
+          width="90%"
+          height="100%"
+          frameborder="0"
+          scrolling="no"
+        ></iframe>
+      </div>
+    </section>
+
+    <section id="cronograma" class="secao-do-cronograma">
+      <div class="cronograma-content">
+        <h1>Horário de Aulas</h1>
+        <div class="cronograma">
+          <div class="tabela-scroll">
+            <table class="tabela-horario">
+              <thead>
+                <tr>
+                  <th class="th-vazio"></th>
+                  <th>SEG</th>
+                  <th>TER</th>
+                  <th>QUA</th>
+                  <th>QUI</th>
+                  <th>SEX</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-hora">8:00</td>
+                  <td class="c-azul" colspan="1">
+                    CES-10<br /><span>F3-104</span>
+                  </td>
+                  <td class="c-rosa">MAT-15<br /><span>F2-103</span></td>
+                  <td class="vazio"></td>
+                  <td class="c-teal" rowspan="2">CPOR</td>
+                  <td class="c-azul">CES-10 LAB<br /><span>SCEPE</span></td>
+                </tr>
+
+                <tr>
+                  <td class="td-hora">9:00</td>
+                  <td class="c-azul">CES-10<br /><span>F3-104</span></td>
+                  <td class="c-rosa">MAT-15<br /><span>F2-103</span></td>
+                  <td class="c-verde">HUM-70<br /><span>F2-105</span></td>
+                  <td class="c-azul">CES-10 LAB<br /><span>SCEPE</span></td>
+                </tr>
+
+                <tr>
+                  <td class="td-hora">10:10</td>
+                  <td class="c-amarelo">QUI-18<br /><span>1506</span></td>
+                  <td class="c-areia">MAT-13<br /><span>F2-103</span></td>
+                  <td class="c-ciano">FND-01<br /><span>AUDITÓRIO</span></td>
+                  <td class="c-teal" rowspan="2">CPOR</td>
+                  <td class="c-areia">MAT-13<br /><span>F2-107</span></td>
+                </tr>
+
+                <tr>
+                  <td class="td-hora">11:10</td>
+                  <td class="c-amarelo">QUI-18<br /><span>1506</span></td>
+                  <td class="c-areia">MAT-13<br /><span>F2-103</span></td>
+                  <td class="c-ciano">FND-01<br /><span>AUDITÓRIO</span></td>
+                  <td class="c-areia">MAT-13<br /><span>F2-107</span></td>
+                </tr>
+
+                <tr class="linha-intervalo">
+                  <td colspan="6"></td>
+                </tr>
+
+                <tr>
+                  <td class="td-hora">13:30</td>
+                  <td class="c-areia">MAT-17<br /><span>F2-103</span></td>
+                  <td class="c-amarelo">
+                    QUI-18 LAB<br /><span>LAB e 1506</span>
+                  </td>
+                  <td class="c-azul">CES-10<br /><span>???</span></td>
+                  <td class="c-verde">HUM-70<br /><span>F2-106</span></td>
+                  <td class="vazio"></td>
+                </tr>
+
+                <tr>
+                  <td class="td-hora">14:30</td>
+                  <td class="c-areia">MAT-17<br /><span>F2-103</span></td>
+                  <td class="c-amarelo">
+                    QUI-18 LAB<br /><span>LAB e 1506</span>
+                  </td>
+                  <td class="c-azul">CES-10<br /><span>???</span></td>
+                  <td class="c-verde">HUM-70<br /><span>F2-106</span></td>
+                  <td class="vazio"></td>
+                </tr>
+
+                <tr>
+                  <td class="td-hora">15:40</td>
+                  <td class="vazio"></td>
+                  <td class="c-amarelo">
+                    QUI-18 LAB<br /><span>LAB e 1506</span>
+                  </td>
+                  <td class="c-amber">MTP-03<br /><span>MOF</span></td>
+                  <td class="vazio"></td>
+                  <td class="vazio"></td>
+                </tr>
+
+                <tr>
+                  <td class="td-hora">16:40</td>
+                  <td class="vazio"></td>
+                  <td class="vazio"></td>
+                  <td class="c-amber">MTP-03<br /><span>MOF</span></td>
+                  <td class="vazio"></td>
+                  <td class="vazio"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
