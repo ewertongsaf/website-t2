@@ -63,4 +63,5 @@ h1 {
 .agenda {
     border-radius: 10px;
     border: 0px;
+    box-shadow: -8px 0px #f2a71b;
 }
