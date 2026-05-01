@@ -112,3 +112,8 @@ h2 {
   text-align: center;
   margin: 8px;
 }
+
+.footer {
+  background-color: #01242d;
+  padding: 1dvh 0dvh;
+}
