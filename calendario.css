@@ -54,7 +54,6 @@ h1 {
     flex-direction: column;
     align-items: center;
     background-color: #025E73;
-    width: 100dvw;
     height: 100dvh;
     padding-top: 3dvh;
     padding-bottom: 8dvh;
@@ -71,15 +70,115 @@ h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-inline: 3dvw;
+    padding-inline: 10px;
     padding-bottom: 4dvh;
 }
 
 .cronograma {
+    display: flex;
+    justify-content: center;
     background-color: #025E73;
-    color: white;
-    font-family: outfit-bold;
-    padding-inline: 10px;
     border-radius: 10px;
     box-shadow: -8px 0px #F2A71B;
+    padding-top: 3px;
+    width: 84dvw;
+    max-width: 800px;
+}
+
+.tabela-scroll {
+  overflow-x: auto;
+  width: 100%;
+  padding: 4px 4px 4px 4px; /* espaço pro box-shadow esquerdo */
+}
+
+/* ── Tabela principal ── */
+.tabela-horario {
+  border-collapse: separate;
+  border-spacing: 4px;
+  width: 100%;
+  min-width: 560px;
+  font-family: outfit-bold;
+}
+
+/* ── Cabeçalho dos dias ── */
+.tabela-horario thead th {
+  background-color: #011F26;
+  color: #F2A71B;
+  font-family: outfit-bold;
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 6px;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.tabela-horario .th-vazio {
+  background: transparent;
+  min-width: 52px;
+}
+
+/* ── Coluna de horários ── */
+.tabela-horario .td-hora {
+  background: #011F26;
+  color: #BFB78F;
+  font-family: outfit-bold;
+  font-size: 0.7rem;
+  text-align: center;
+  padding: 6px 4px;
+  border-radius: 6px;
+  white-space: nowrap;
+  min-width: 50px;
+}
+
+/* ── Linha de intervalo ── */
+.tabela-horario .linha-intervalo td {
+  height: 10px;
+  background: transparent;
+  padding: 0;
+}
+
+/* ── Célula genérica ── */
+.tabela-horario td {
+  text-align: center;
+  padding: 7px 5px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-family: outfit-bold;
+  vertical-align: middle;
+  line-height: 1.3;
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.tabela-horario td span {
+  display: block;
+  font-size: 0.62rem;
+  opacity: 0.75;
+  font-family: outfit-bold;
+}
+
+.tabela-horario td:hover:not(.vazio):not(.td-hora):not(.linha-intervalo td) {
+  transform: scale(1.04);
+  filter: brightness(1.12);
+}
+
+/* ── Célula vazia ── */
+.tabela-horario .vazio {
+  background: rgba(1, 31, 38, 0.5);
+}
+
+/* ── Paleta de células ── */
+.c-azul   { background: #b3d9e8; color: #011F26; }
+.c-rosa   { background: #f5c6d0; color: #011F26; }
+.c-verde  { background: #c2ddb5; color: #011F26; }
+.c-amarelo{ background: #fde9a6; color: #011F26; }
+.c-areia  { background: #BFB78F; color: #011F26; }
+.c-ciano  { background: #d0edf2; color: #011F26; }
+.c-amber  { background: #F2A71B; color: #011F26; }
+.c-teal   {
+  background: #011F26;
+  color: #F2A71B;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  box-shadow: inset -3px 0 0 #F2A71B;
 }
