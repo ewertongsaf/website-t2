@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursos | Website T2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="resources.css" />
+  </head>
+  <body class="resources-page">
+    <header>
+      <div class="container">
+        <h3>Subturma T2</h3>
+        <div class="navbar">
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="about.html">Sobre</a></li>
+            <li><a href="index.html">Cronograma</a></li>
+            <li><a href="index.html">Calendário</a></li>
+            <li><a href="index.html">Membros</a></li>
+            <li><a href="resources.html" aria-current="page">Recursos</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="resources-hero">
+        <div class="page-shell resources-hero-content">
+          <div class="page-badge">Recursos da T2</div>
+          <h1>Ferramentas úteis para acompanhar a turma</h1>
+          <p>
+            Nesta página ficam a calculadora de faltas e o espaço reservado para
+            novas funcionalidades da subturma.
+          </p>
+        </div>
+      </section>
+
+      <section class="page-section">
+        <div class="page-shell">
+          <div class="section-heading">
+            <h2>Calculadora de faltas</h2>
+            <p>
+              Use este mapa para acompanhar o percentual de faltas e saber
+              quantas ainda restam até o limite de 25%.
+            </p>
+          </div>
+
+          <div class="calculator-grid">
+            <form class="calculator-card" id="absence-form">
+              <label>
+                Total de aulas previstas
+                <input
+                  type="number"
+                  id="total-classes"
+                  min="1"
+                  step="1"
+                  value="40"
+                />
+              </label>
+
+              <label>
+                Faltas registradas
+                <input
+                  type="number"
+                  id="current-absences"
+                  min="0"
+                  step="1"
+                  value="0"
+                />
+              </label>
+
+              <label>
+                Limite de faltas permitido (%)
+                <input
+                  type="number"
+                  id="limit-percent"
+                  min="1"
+                  max="100"
+                  step="1"
+                  value="25"
+                />
+              </label>
+
+              <button type="submit" class="calculate-button">Calcular</button>
+            </form>
+
+            <div class="calculator-card result-card" aria-live="polite">
+              <h3>Resumo</h3>
+              <p class="result-value" id="absence-percent">0%</p>
+              <p class="result-label">Percentual de faltas</p>
+              <div class="result-list">
+                <div>
+                  <span>Faltas máximas</span>
+                  <strong id="max-absences">0</strong>
+                </div>
+                <div>
+                  <span>Faltas restantes</span>
+                  <strong id="remaining-absences">0</strong>
+                </div>
+                <div>
+                  <span>Situação</span>
+                  <strong id="absence-status">Dentro do limite</strong>
+                </div>
+              </div>
+              <p class="result-note" id="absence-note">
+                Ajuste os números ao lado para ver o mapa atualizado.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-section future-section">
+        <div class="page-shell">
+          <div class="section-heading">
+            <h2>Implementações futuras</h2>
+            <p>
+              Espaço reservado para melhorias que podem entrar depois sem mudar
+              a estrutura principal do site.
+            </p>
+          </div>
+
+          <div class="future-grid">
+            <article class="future-card">
+              <h3>Mapa por disciplina</h3>
+              <p>
+                Um painel para acompanhar faltas separadas por matéria e por
+                professor.
+              </p>
+            </article>
+            <article class="future-card">
+              <h3>Lembretes automáticos</h3>
+              <p>Alertas para datas importantes, provas e prazos de entrega.</p>
+            </article>
+            <article class="future-card">
+              <h3>Estatísticas da turma</h3>
+              <p>
+                Gráficos com presença, desempenho e evolução ao longo do ano.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-shell">
+        <p>Website T2</p>
+      </div>
+    </footer>
+    <script src="resources.js"></script>
+  </body>
+</html>
