@@ -49,11 +49,38 @@ h1 {
   color: #F2A71B;
 }
 
+.hero {
+    padding-bottom: 0px;
+    padding-top: 0px;
+}
+
+.hero-content {
+    background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
+    color: #b3d9e8;
+    font-size: 1.2em;
+    padding-inline: 15dvw;
+    padding-top: 12dvh;
+    padding-bottom: 8dvh;
+}
+
+.hero-content h1{
+    color: #b3d9e8;
+    font-size: 3rem;
+}
+
+.botao {
+    font-size: 1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.botao p {
+    margin: 0px 0px 0px 0px;
+}
+
 .agenda-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
     height: 100dvh;
     padding-top: 3dvh;
     padding-bottom: 8dvh;
