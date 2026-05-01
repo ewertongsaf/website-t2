@@ -50,27 +50,38 @@ h1 {
 }
 
 .hero {
-    padding-bottom: 0px;
-    padding-top: 0px;
+    padding: 78px 0 72px;
+    background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
 }
 
 .hero-content {
-    background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
     color: #b3d9e8;
     font-size: 1.2em;
-    padding-inline: 15dvw;
-    padding-top: 12dvh;
-    padding-bottom: 8dvh;
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 0;
 }
 
 .hero-content h1{
-    color: #b3d9e8;
-    font-size: 3rem;
+    margin: 0;
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+    color: #e7e4e4;
+    font-family: outfit-bold;
+}
+
+.hero-content p {
+    max-width: 760px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e7e4e4;
 }
 
 .botao {
     font-size: 1rem;
-    padding: 0.5rem 1rem 0.5rem 1rem;
+    color: #01242d;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 700;
 }
 
 .botao p {
@@ -87,10 +98,10 @@ h1 {
 }
 
 .agenda {
-    border-radius: 10px;
-    border: 0px;
+    border-radius: 15px;
+    border: 7px solid #025E73;
     box-shadow: -8px 0px #f2a71b;
-    max-width: 1000px;
+    max-width: 788px;
 }
 
 .cronograma-content {
