@@ -49,3 +49,10 @@ h1 {
   color: #e7e4e4;
   padding-top: 20px;
 }
+
+.agenda-content {
+    display: flex;
+    justify-content: center;
+    width: 98dvw;
+    height: 100dvh;
+}
