@@ -2,6 +2,10 @@
   src: url(fonts/Outfit-ExtraBold.ttf);
   font-family: outfit-bold;
 }
+@font-face {
+  src: url(fonts/SpaceMono-Regular.ttf);
+  font-family: spacemono;
+}
 
 body {
   margin: 0px;
@@ -45,9 +49,10 @@ header h3 {
 }
 
 .hero {
-  background-color: #025e73;
-  padding-top: 100px;
-  padding-bottom: 150px;
+  background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
+  padding-top: 8dvh;
+  padding-bottom: 10dvh;
+  font-size: clamp(1rem, 2vw, 1.4rem);
 }
 
 .content {
@@ -64,35 +69,46 @@ header h3 {
   color: black;
 }
 
-h1 {
+h1, h2 {
   font-family: outfit-bold;
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
   color: #e7e4e4;
-  padding-top: 20px;
+  padding-top: 10px;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  margin: 5px;
 }
 
 .content p {
   color: #e7e4e4;
   font-size: 1.2em;
+  font-family: spacemono;
 }
 
 .boxcontainer {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  align-items: flex-end;
   width: 80%;
-  padding-top: 30px;
+  padding-top: 12px;
 }
 
 .box {
-  background-color: rgba(255, 255, 255, 0.121);
+  background: linear-gradient(180deg, #e7e4e42f 0%, #e7e4e40c 100%);
   border-radius: 15px;
-  padding: 0px 40px;
+  min-width: 120px;
+  padding: 0px 10px 8px 10px;
+  margin: 8px 0px;
 }
 
 .box h2 {
   text-align: center;
-  color: white;
 }
+
 .box p {
   text-align: center;
+  margin: 8px;
 }
