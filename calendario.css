@@ -47,12 +47,15 @@ header h3 {
 h1 {
   font-family: outfit-bold;
   color: #e7e4e4;
-  padding-top: 20px;
 }
 
 .agenda-content {
     display: flex;
-    justify-content: center;
-    width: 98dvw;
-    height: 100dvh;
+    flex-direction: column;
+    align-items: center;
+    background-color: #025E73;
+    width: 100dvw;
+    height: 74dvh;
+    padding-top: 3dvh;
+    padding-bottom: 8dvh;
 }
