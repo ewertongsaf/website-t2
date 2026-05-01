@@ -89,10 +89,9 @@ h1 {
 .tabela-scroll {
   overflow-x: auto;
   width: 100%;
-  padding: 4px 4px 4px 4px; /* espaço pro box-shadow esquerdo */
+  padding: 4px 4px 4px 4px;
 }
 
-/* ── Tabela principal ── */
 .tabela-horario {
   border-collapse: separate;
   border-spacing: 4px;
@@ -101,7 +100,6 @@ h1 {
   font-family: outfit-bold;
 }
 
-/* ── Cabeçalho dos dias ── */
 .tabela-horario thead th {
   background-color: #011F26;
   color: #F2A71B;
@@ -119,7 +117,6 @@ h1 {
   min-width: 52px;
 }
 
-/* ── Coluna de horários ── */
 .tabela-horario .td-hora {
   background: #011F26;
   color: #BFB78F;
@@ -132,14 +129,12 @@ h1 {
   min-width: 50px;
 }
 
-/* ── Linha de intervalo ── */
 .tabela-horario .linha-intervalo td {
   height: 10px;
   background: transparent;
   padding: 0;
 }
 
-/* ── Célula genérica ── */
 .tabela-horario td {
   text-align: center;
   padding: 7px 5px;
@@ -163,12 +158,10 @@ h1 {
   filter: brightness(1.12);
 }
 
-/* ── Célula vazia ── */
 .tabela-horario .vazio {
   background: rgba(1, 31, 38, 0.5);
 }
 
-/* ── Paleta de células ── */
 .c-azul   { background: #b3d9e8; color: #011F26; }
 .c-rosa   { background: #f5c6d0; color: #011F26; }
 .c-verde  { background: #c2ddb5; color: #011F26; }
