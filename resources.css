@@ -181,6 +181,46 @@
   margin: 0;
 }
 
+/* indicadores de status por cor */
+.result-card.status-green {
+  border-left: 6px solid #2ecc71;
+  background: linear-gradient(
+    135deg,
+    rgba(46, 204, 113, 0.05) 0%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+}
+
+.result-card.status-green .result-value {
+  color: #27ae60;
+}
+
+.result-card.status-yellow {
+  border-left: 6px solid #f39c12;
+  background: linear-gradient(
+    135deg,
+    rgba(243, 156, 18, 0.05) 0%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+}
+
+.result-card.status-yellow .result-value {
+  color: #e67e22;
+}
+
+.result-card.status-red {
+  border-left: 6px solid #e74c3c;
+  background: linear-gradient(
+    135deg,
+    rgba(231, 76, 60, 0.05) 0%,
+    rgba(255, 255, 255, 0.95) 100%
+  );
+}
+
+.result-card.status-red .result-value {
+  color: #c0392b;
+}
+
 @media (max-width: 900px) {
   .calculator-grid,
   .future-grid {

@@ -1,37 +1,60 @@
 const form = document.getElementById("absence-form");
 const totalClassesInput = document.getElementById("total-classes");
 const currentAbsencesInput = document.getElementById("current-absences");
-const limitPercentInput = document.getElementById("limit-percent");
 const percentOutput = document.getElementById("absence-percent");
 const maxOutput = document.getElementById("max-absences");
 const remainingOutput = document.getElementById("remaining-absences");
 const statusOutput = document.getElementById("absence-status");
 const noteOutput = document.getElementById("absence-note");
+const resultCard = document.querySelector(".result-card");
+
+const LIMIT_PERCENT = 15; // Limite fixo de 15%
+
+// Determina a cor baseada no percentual de faltas e limite
+function getColorStatus(percentage, isWithinLimit) {
+  if (!isWithinLimit) {
+    return {
+      class: "status-red",
+      status: "Crítico",
+      message:
+        "Você ultrapassou o limite de faltas! Procure a secretaria para regularizar sua situação.",
+    };
+  }
+  if (percentage >= 10) {
+    return {
+      class: "status-yellow",
+      status: "Atenção",
+      message:
+        "Você está próximo do limite de faltas. Cuidado para não ultrapassar!",
+    };
+  }
+  return {
+    class: "status-green",
+    status: "Seguro",
+    message: "Você está seguro. Continue acompanhando suas faltas!",
+  };
+}
 
 // Algoritmo executado ao 'atualizar' a calculadora
 function updateCalculator() {
-  const totalClasses = Math.max(0, Number(totalClassesInput.value) || 0); // Prevencao numeros < 0 com funcoes Math.max(x, 0)
+  const totalClasses = Math.max(0, Number(totalClassesInput.value) || 0);
   const currentAbsences = Math.max(0, Number(currentAbsencesInput.value) || 0);
-  const limitPercent = Math.min(
-    100,
-    Math.max(1, Number(limitPercentInput.value) || 15), // 15% por padrao
-  );
-  const maxAbsences = Math.floor((totalClasses * limitPercent) / 100); // Usar o floor para saber o numero maximo de faltas!
+  const maxAbsences = Math.floor((totalClasses * LIMIT_PERCENT) / 100);
   const remainingAbsences = Math.max(maxAbsences - currentAbsences, 0);
   const percentage =
     totalClasses > 0 ? (currentAbsences / totalClasses) * 100 : 0;
-  const isWithinLimit = currentAbsences <= maxAbsences; // Ve se o cara estourou as faltas (booleano)
+  const isWithinLimit = currentAbsences <= maxAbsences;
+  const colorStatus = getColorStatus(percentage, isWithinLimit);
 
-  // Feat: Implementar mudanca de cores da caixa para indicar risco
+  // Atualiza os valores
   percentOutput.textContent = `${percentage.toFixed(1)}%`;
   maxOutput.textContent = String(maxAbsences);
   remainingOutput.textContent = String(remainingAbsences);
-  statusOutput.textContent = isWithinLimit
-    ? "Dentro do limite"
-    : "Acima do limite";
-  noteOutput.textContent = isWithinLimit
-    ? "Você ainda está dentro do limite de faltas para esta disciplina."
-    : "O limite foi ultrapassado. Vale revisar o mapa de faltas com atenção.";
+  statusOutput.textContent = colorStatus.status;
+  noteOutput.textContent = colorStatus.message;
+
+  // Atualiza a cor do card
+  resultCard.className = `calculator-card result-card ${colorStatus.class}`;
 }
 
 // Atualiza a calculadora quando o usuario *submita* os dados
@@ -40,11 +63,5 @@ form.addEventListener("submit", (event) => {
   updateCalculator();
 });
 
-// Atualiza automaticamente a calculadora a medida que o usuario digita
-[totalClassesInput, currentAbsencesInput, limitPercentInput].forEach(
-  (input) => {
-    input.addEventListener("input", updateCalculator);
-  },
-);
-
+// Inicializa com valores padrão
 updateCalculator();
