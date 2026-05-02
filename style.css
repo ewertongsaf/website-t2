@@ -61,7 +61,10 @@ header h3 {
 }
 
 .hero {
-  background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
+  background: linear-gradient(-45deg, #053f4b, #0a4a58, #066a7f, #03252d);
+  background-size: 400% 400%;
+  animation: moverDegrade 15s ease infinite;
+  margin: 0;
   padding-top: 8dvh;
   padding-bottom: 10dvh;
   font-size: clamp(1rem, 2vw, 1.4rem);
@@ -138,4 +141,16 @@ h2 {
 
 .footer p {
   margin: 0;
+}
+
+@keyframes moverDegrade {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
