@@ -18,6 +18,7 @@ header {
 header h3 {
   color: #e7e4e4;
   padding: 2px 20px;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
 .container {
