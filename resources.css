@@ -205,3 +205,41 @@
     min-height: auto;
   }
 }
+
+@media (max-width: 768px) {
+  .page-shell {
+    width: min(100% - 32px, 1100px);
+  }
+
+  .calculator-section {
+    padding: 32px 0 40px;
+    align-items: flex-start;
+  }
+
+  .calculator-intro h1 {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+
+  .calculator-intro p {
+    font-size: 1rem;
+  }
+
+  .calculator-grid {
+    gap: 16px;
+  }
+
+  .calculator-card {
+    padding: 18px;
+  }
+
+  .calculator-card input,
+  .calculator-card select,
+  .calculate-button {
+    padding: 12px 14px;
+  }
+
+  .result-list div {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
