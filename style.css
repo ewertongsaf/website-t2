@@ -17,7 +17,7 @@ header {
 
 header h3 {
   color: #e7e4e4;
-  padding: 2px 20px;
+  padding: 2px 5dvw;
   font-size: clamp(1.2rem, 3vw, 1.5rem);
 }
 
@@ -26,6 +26,7 @@ header h3 {
   justify-content: space-between;
   align-items: center;
   font-family: outfit-bold;
+  padding-right: 3dvw;
 }
 
 .container a {
