@@ -503,6 +503,12 @@ h4::selection,
 pre::selection,
 h5::selection,
 div::selection,
+td::selection,
+tr::selection,
+thead::selection,
+tbody::selection,
+span::selection,
+label::selection
 li::selection,
 a::selection {
   color: #eeb007;
