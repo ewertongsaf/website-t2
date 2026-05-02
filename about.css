@@ -87,3 +87,44 @@
 .page-footer p {
   margin: 0;
 }
+
+/* O Container Principal */
+.contrib-placeholder {
+  display: grid;
+  /* A linha abaixo é o grande segredo da responsividade: */
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px; /* Espaço entre as fotos */
+  width: 100%;
+  padding: 20px 0; /* Um respiro em cima e embaixo */
+}
+
+/* O Cartão que segura a foto e o texto */
+.cartao-foto {
+  margin: 0; /* Reseta a margem padrão do figure */
+  background-color: #f9f9f9; /* Uma cor de fundo suave para o texto */
+  border-radius: 8px; /* Cantos arredondados, fica bem moderno */
+  overflow: hidden; /* Garante que a foto não vaze dos cantos arredondados */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Uma sombrinha leve */
+}
+
+/* A Imagem */
+.cartao-foto img {
+  width: 100%; /* Faz a imagem preencher a largura toda do cartão */
+  height: auto; /* Mantém a proporção original da foto (não achata) */
+  display: block; /* Remove o pequeno espaço em branco que fica embaixo das imagens */
+}
+
+/* A Descrição */
+.cartao-foto figcaption {
+  padding: 16px;
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+}
+
+.cartao-foto {
+  transition: transform 0.3s ease;
+}
+.cartao-foto:hover {
+  transform: translateY(-5px); /* Dá um pulinho para cima */
+}
