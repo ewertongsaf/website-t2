@@ -2,6 +2,10 @@
   src: url(fonts/Outfit-ExtraBold.ttf);
   font-family: outfit-bold;
 }
+@font-face {
+  src: url(fonts/SpaceMono-Regular.ttf);
+  font-family: spacemono;
+}
 
 body {
   margin: 0px;
@@ -20,12 +24,14 @@ header h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-family: outfit-bold;
 }
 
 .navbar ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
+  font-family: spacemono;
 }
 
 .navbar li {
