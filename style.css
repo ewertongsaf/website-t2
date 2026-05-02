@@ -235,6 +235,7 @@ footer {
 .footer-coluna {
   flex: 1;
   min-width: 220px; /* Garante que não fiquem espremidas */
+  flex-wrap: wrap;
 }
 
 /* --- ESTILOS DA COLUNA 1 (MARCA) --- */
@@ -279,6 +280,23 @@ footer {
 
 .logo-itajr {
   width: 150px;
+}
+
+div:has(> .logo-itajr) {
+  padding-top: 1dvw;
+  padding-bottom: 1dvw;
+  padding-left: 15px;
+}
+
+.footer-coluna:first-of-type p, .footer-coluna:first-of-type div {
+  max-width: 40dvw;
+}
+
+.footer-coluna:first-of-type {
+  display: flex;
+  flex-flow: column wrap;
+  max-height: 40dvw;
+  align-content: space-around;
 }
 
 /* --- ESTILOS DAS COLUNAS 2 E 3 (LINKS) --- */
@@ -352,7 +370,7 @@ footer {
 /* --- ESTILOS DA BASE (DIREITOS AUTORAIS) --- */
 .footer-base {
   max-width: 1200px;
-  margin: 50px auto 0;
+  margin: 40px auto 0;
   padding-top: 25px;
   border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil */
   text-align: center;
