@@ -91,7 +91,7 @@
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px; /* Espaço entre as fotos */
   max-width: 100%;
-  padding: 20px 0; /* Um respiro em cima e embaixo */
+  padding: 20px; /* Um respiro em volta das fotos */
 }
 
 /* O Cartão que segura a foto e o texto */
@@ -164,7 +164,7 @@
   .contrib-placeholder {
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 12px;
-    padding: 12px 0;
+    padding: 12px;
   }
 
   .cartao-foto figcaption {
