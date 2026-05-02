@@ -56,6 +56,10 @@ header h3 {
   transition: color 0.3s ease;
 }
 
+.navbar a[aria-current="page"] {
+  color: #f2a71b;
+}
+
 .hero {
   background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
   padding-top: 8dvh;
@@ -70,7 +74,7 @@ header h3 {
 }
 
 .botao {
-  font-family: 'Times New Roman';
+  font-family: "Times New Roman";
   font-weight: 700;
   color: #01242d;
   background-color: #f2a71b;
@@ -79,7 +83,8 @@ header h3 {
   border-radius: 20px;
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: outfit-bold;
   font-size: clamp(2.2rem, 4.5vw, 4rem);
   color: #e7e4e4;
@@ -125,5 +130,12 @@ h2 {
 
 .footer {
   background-color: #01242d;
-  padding: 1dvh 0dvh;
+  color: #e7e4e4;
+  padding: 18px 20px;
+  text-align: center;
+  font-family: spacemono;
+}
+
+.footer p {
+  margin: 0;
 }
