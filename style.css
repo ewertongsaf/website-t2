@@ -475,15 +475,18 @@ a::selection {
   }
 
   .footer-container {
+    flex-direction: column;
+    align-items: stretch;
     gap: 24px;
   }
 
   .footer-coluna {
+    width: 100%;
     min-width: 0;
   }
 
   .marca-header {
-    align-items: flex-start;
+    align-items: center;
   }
 
   .descricao {
@@ -491,12 +494,23 @@ a::selection {
   }
 
   .box-contact {
-    flex-direction: column;
-    gap: 8px;
+    align-items: center;
+    gap: 10px;
   }
 
   .email {
     margin-left: 0;
+  }
+
+  .footer-coluna h4,
+  .footer-links,
+  .descricao,
+  .footer-base {
+    text-align: center;
+  }
+
+  .footer-links li {
+    margin-bottom: 10px;
   }
 
   .footer-base {
