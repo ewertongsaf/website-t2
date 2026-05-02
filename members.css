@@ -99,3 +99,9 @@
   white-space: pre-wrap;
   font-family: inherit;
 }
+
+.page-hero {
+  background: linear-gradient(-45deg, #053f4b, #0a4a58, #066a7f, #03252d);
+  background-size: 400% 400%;
+  animation: moverDegrade 15s ease infinite;
+}
