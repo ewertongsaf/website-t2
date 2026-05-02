@@ -28,23 +28,21 @@ const DISCIPLINE_TOTAL_CLASSES = {
 
 // Determina a cor baseada no percentual de faltas e limite
 function getColorStatus(percentage, isWithinLimit, isMaxxed) {
-  if(isMaxxed) {
+  if (isMaxxed) {
     return {
       class: "status-red",
       status: "Crítico",
       message:
         "Você atingiu o limite de faltas! Não pode faltar mais nenhuma aula. Cuidado!",
     };
-  }
-  else if (!isWithinLimit) {
+  } else if (!isWithinLimit) {
     return {
       class: "status-red",
       status: "Crítico",
       message:
         "Você ultrapassou o limite de faltas! Procure a secretaria para regularizar sua situação.",
     };
-  }
-  else if (percentage >= 10) {
+  } else if (percentage >= 10) {
     return {
       class: "status-yellow",
       status: "Atenção",
@@ -69,7 +67,7 @@ function updateCalculator() {
   const percentage =
     totalClasses > 0 ? (currentAbsences / totalClasses) * 100 : 0;
   const isWithinLimit = currentAbsences < maxAbsences;
-  const isMaxxed = currentAbsences == maxAbsences
+  const isMaxxed = currentAbsences == maxAbsences;
   const colorStatus = getColorStatus(percentage, isWithinLimit, isMaxxed);
 
   selectedTotalOutput.textContent = `Total no semestre: ${totalClasses} aulas`;
