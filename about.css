@@ -1,3 +1,7 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 .page-shell {
   width: min(1100px, calc(100% - 48px));
   margin: 0 auto;
@@ -82,9 +86,9 @@
 .contrib-placeholder {
   display: grid;
   /* A linha abaixo é o grande segredo da responsividade: */
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 24px; /* Espaço entre as fotos */
-  width: 100%;
+  max-width: 100%;
   padding: 20px 0; /* Um respiro em cima e embaixo */
 }
 
@@ -95,13 +99,15 @@
   border-radius: 8px; /* Cantos arredondados, fica bem moderno */
   overflow: hidden; /* Garante que a foto não vaze dos cantos arredondados */
   box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* Uma sombrinha leve */
+  height: 100%;
 }
 
 /* A Imagem */
 .cartao-foto img {
-  width: 100%; /* Faz a imagem preencher a largura toda do cartão */
-  height: auto; /* Mantém a proporção original da foto (não achata) */
-  display: block; /* Remove o pequeno espaço em branco que fica embaixo das imagens */
+  width: 100%;
+  height: auto; 
+  display: block;
+  object-fit: contain; /* Garante que a foto toda apareça */
 }
 
 /* A Descrição */
@@ -110,6 +116,8 @@
   text-align: center;
   font-size: 14px;
   color: #333;
+  flex-grow: 1; /* Faz o texto preencher o espaço restante */
+  word-wrap: break-word; /* Garante que palavras longas quebrem a linha */
 }
 
 .cartao-foto {

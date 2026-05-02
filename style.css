@@ -7,6 +7,17 @@
   font-family: spacemono;
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    max-width: 100vw;
+    overflow-x: hidden; /* Esconde tudo que vazar na horizontal */
+    margin: 0;
+    padding: 0;
+}
+
 body {
   margin: 0px;
 }
@@ -100,6 +111,12 @@ h2 {
   font-size: clamp(2.2rem, 4.5vw, 4rem);
   color: #e7e4e4;
   padding-top: 10px;
+}
+
+.content h1{
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
 }
 
 h2 {
@@ -307,4 +324,59 @@ footer {
     text-align: center;
     font-size: 0.9rem;
     color: #9ca3af;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #143840 #03252e; 
+}
+
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background: #03252e;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #143840; 
+    border-radius: 10px; 
+    border: 2px solid #03252e; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #fca311;
+}
+
+p::selection, em::selection, figcaption::Selection, h1::selection, i::selection, h2::selection, h3::selection, h4::selection, pre::selection, h5::selection, div::selection, li::selection, a::selection{
+  color: #eeb007;
+  background-color: #26acc7;
+}
+
+@media (max-width: 768px) {
+    
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 15px;
+    }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    gap: 15px;
+    }
+
+  .navbar ul li {
+    width: 100%;
+    text-align: center;
+    }
 }
