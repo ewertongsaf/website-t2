@@ -209,3 +209,62 @@
   background-size: 400% 400%;
   animation: moverDegrade 15s ease infinite;
 }
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 64px 0 52px;
+  }
+
+  .hero-content {
+    width: min(100% - 32px, 1100px);
+  }
+
+  .hero-content h1 {
+    font-size: clamp(1.9rem, 8vw, 2.8rem);
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .agenda-content {
+    height: auto;
+    min-height: 0;
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+
+  .agenda {
+    width: 100%;
+    border-width: 5px;
+  }
+
+  .secao-do-cronograma {
+    padding-bottom: 48px;
+  }
+
+  .cronograma-content {
+    padding-inline: 16px;
+    gap: 16px;
+  }
+
+  .cronograma {
+    width: 100%;
+  }
+
+  .tabela-horario {
+    min-width: 480px;
+    border-spacing: 3px;
+  }
+
+  .tabela-horario td,
+  .tabela-horario thead th,
+  .tabela-horario .td-hora {
+    font-size: 0.64rem;
+    padding: 6px 4px;
+  }
+
+  .tabela-horario td span {
+    font-size: 0.56rem;
+  }
+}
