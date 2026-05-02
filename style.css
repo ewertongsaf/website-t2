@@ -313,12 +313,15 @@ footer {
 
 .box-contact {
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .icone {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 40px;
   width: 40px;
   height: 40px;
   background-color: #143840; /* Fundo dos botões sociais */
@@ -330,8 +333,9 @@ footer {
 }
 
 .icone i {
+  display: block;
   line-height: 1;
-  font-size: 1rem;
+  font-size: 0.95rem;
 }
 
 .icone:hover {
@@ -343,7 +347,7 @@ footer {
 .email {
   font-size: 0.95rem;
   color: #cbd5e1;
-  margin-left: 10px;
+  margin-left: 0;
 }
 
 /* --- ESTILOS DA BASE (DIREITOS AUTORAIS) --- */
