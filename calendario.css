@@ -229,14 +229,16 @@
 
   .agenda-content {
     height: auto;
-    min-height: 0;
-    padding-top: 24px;
-    padding-bottom: 40px;
+    min-height: 85dvh;
+    padding-top: 40px;
+    padding-bottom: 60px;
   }
 
   .agenda {
-    width: 100%;
+    width: min(90vw, 90%);
     border-width: 5px;
+    min-height: 420px;
+    padding: 16px;
   }
 
   .secao-do-cronograma {
