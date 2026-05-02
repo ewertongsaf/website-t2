@@ -170,3 +170,141 @@ h2 {
         background-position: 0% 50%;
     }
 }
+
+/* Container principal do Footer */
+footer {
+    background-color: #03252e; /* Fundo azul-petróleo escuro */
+    color: #e0e0e0;
+    font-family: sans-serif;
+    padding: 60px 20px 20px;
+}
+
+/* Flexbox para alinhar as 4 colunas lado a lado */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Faz quebrar a linha no celular */
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+.footer-coluna {
+    flex: 1;
+    min-width: 220px; /* Garante que não fiquem espremidas */
+}
+
+/* --- ESTILOS DA COLUNA 1 (MARCA) --- */
+.marca-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.logo-box {
+    background-color: #fca311; /* Amarelo/Laranja do logo */
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    padding: 10px 12px;
+    border-radius: 8px;
+}
+
+.marca-texto h3 {
+    color: #ffffff;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.marca-texto span {
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.descricao {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #cbd5e1;
+    max-width: 250px;
+}
+
+/* --- ESTILOS DAS COLUNAS 2 E 3 (LINKS) --- */
+.footer-coluna h4 {
+    color: #fca311; /* Cor dos títulos */
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    font-weight: 500;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+}
+
+.footer-links a {
+    color: #cbd5e1;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+    color: #ffffff; /* Fica branco ao passar o mouse */
+}
+
+/* --- ESTILOS DA COLUNA 4 (CONTATO) --- */
+.icones-sociais {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.box-contact{
+  display: flex;
+}
+
+.icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: #143840; /* Fundo dos botões sociais */
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.icone:hover {
+    background-color: #fca311;
+    color: #03252e;
+    transform: translateY(-3px); /* Efeito flutuante de bônus! */
+}
+
+.email {
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    margin-left: 10px;
+}
+
+/* --- ESTILOS DA BASE (DIREITOS AUTORAIS) --- */
+.footer-base {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Linha sutil */
+    text-align: center;
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
