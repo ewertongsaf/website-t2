@@ -331,3 +331,8 @@ footer {
 ::-webkit-scrollbar-thumb:hover {
     background: #fca311;
 }
+
+p::selection, em::selection, figcaption::Selection, h1::selection, i::selection, h2::selection, h3::selection, h4::selection, pre::selection, h5::selection, div::selection, li::selection, a::selection{
+  color: #eeb007;
+  background-color: #26acc7;
+}
