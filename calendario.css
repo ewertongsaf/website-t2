@@ -1,138 +1,99 @@
-@font-face {
-  src: url(fonts/Outfit-ExtraBold.ttf);
-  font-family: outfit-bold;
-}
-
-body {
-  margin: 0px;
-}
-
-header {
-  background-color: #01242d;
-}
-
-header h3 {
-  color: #e7e4e4;
-  padding: 2px 20px;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-}
-
-.navbar ul {
-  display: flex;
-  flex-direction: row;
-}
-
-.navbar li {
-  padding: 2px 10px;
-}
-
-.navbar a {
-  text-decoration: none;
-  color: #e7e4e4;
-}
-
-.navbar ul {
-  list-style-type: none;
-}
-
-.navbar a:hover {
-  color: #f2a71b;
-  transition: color 0.3s ease;
-}
-
-h1 {
-  font-family: outfit-bold;
-  color: #F2A71B;
+.calendar-page {
+  margin: 0;
+  background: linear-gradient(180deg, #f6f7f8 0%, #eef3f4 100%);
 }
 
 .hero {
-    padding: 78px 0 72px;
-    background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
+  padding: 78px 0 72px;
+  background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
 }
 
 .hero-content {
-    font-size: 1.2em;
-    width: min(1100px, calc(100% - 48px));
-    margin: 0 auto;
-    padding: 0;
+  width: min(1100px, calc(100% - 48px));
+  margin: 0 auto;
 }
 
-.hero-content h1{
-    margin: 0;
-    font-size: clamp(2.2rem, 4.5vw, 4rem);
-    color: #e7e4e4;
-    font-family: outfit-bold;
+.hero-content h1 {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.5vw, 4rem);
+  color: #e7e4e4;
+  font-family: outfit-bold;
 }
 
 .hero-content p {
-    max-width: 760px;
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #e7e4e4;
+  max-width: 760px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #e7e4e4;
 }
 
 .botao {
-    font-size: 1rem;
-    color: #01242d;
-    padding: 10px 16px;
-    border-radius: 999px;
-    font-weight: 700;
+  display: inline-block;
+  font-size: 1rem;
+  color: #01242d;
+  background-color: #f2a71b;
+  padding: 10px 16px;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-bottom: 14px;
 }
 
-.botao p {
-    margin: 0px 0px 0px 0px;
+.secao-da-agenda {
+  padding: 0;
 }
 
 .agenda-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /*background-color: #e7e4e4a2; */
-    height: 100dvh;
-    padding-top: 3dvh;
-    padding-bottom: 8dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100dvh;
+  padding-top: 3dvh;
+  padding-bottom: 8dvh;
+}
+
+.agenda-content h1,
+.cronograma-content h1 {
+  margin: 0;
+  color: #01242d;
+  font-family: outfit-bold;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
 }
 
 .agenda {
-    border-radius: 15px;
-    border: 7px solid #025E73;
-    box-shadow: -8px 0px #f2a71b;
-    max-width: 788px;
+  width: 84%;
+  border-radius: 15px;
+  border: 7px solid #025e73;
+  box-shadow: -8px 0px #f2a71b;
+  max-width: 788px;
 }
 
 .secao-do-cronograma {
-    padding-bottom: 18dvh;
+  padding-bottom: 18dvh;
 }
 
 .cronograma-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    /*background-color: #e7e4e4a2; */
-    padding-inline: 10px;
-    padding-bottom: 4dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding-inline: 24px;
+  gap: 24px;
 }
 
 .cronograma {
-    display: flex;
-    justify-content: center;
-    background-color: #025E73;
-    border-radius: 10px;
-    box-shadow: -8px 0px #F2A71B;
-    padding-top: 3px;
-    width: 84dvw;
-    max-width: 800px;
+  display: flex;
+  justify-content: center;
+  background-color: #025e73;
+  border-radius: 14px;
+  box-shadow: -8px 0px #f2a71b;
+  padding-top: 3px;
+  width: min(84dvw, 800px);
 }
 
 .tabela-scroll {
   overflow-x: auto;
   width: 100%;
-  padding: 4px 4px 4px 4px;
+  padding: 4px;
 }
 
 .tabela-horario {
@@ -144,8 +105,8 @@ h1 {
 }
 
 .tabela-horario thead th {
-  background-color: #011F26;
-  color: #F2A71B;
+  background-color: #011f26;
+  color: #f2a71b;
   font-family: outfit-bold;
   font-size: 0.78rem;
   letter-spacing: 0.12em;
@@ -161,8 +122,8 @@ h1 {
 }
 
 .tabela-horario .td-hora {
-  background: #011F26;
-  color: #BFB78F;
+  background: #011f26;
+  color: #bfb78f;
   font-family: outfit-bold;
   font-size: 0.7rem;
   text-align: center;
@@ -186,7 +147,9 @@ h1 {
   font-family: outfit-bold;
   vertical-align: middle;
   line-height: 1.3;
-  transition: transform 0.15s ease, filter 0.15s ease;
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
 }
 
 .tabela-horario td span {
@@ -205,22 +168,38 @@ h1 {
   background: rgba(1, 31, 38, 0.5);
 }
 
-.c-azul   { background: #b3d9e8; color: #011F26; }
-.c-rosa   { background: #f5c6d0; color: #011F26; }
-.c-verde  { background: #c2ddb5; color: #011F26; }
-.c-amarelo{ background: #fde9a6; color: #011F26; }
-.c-areia  { background: #BFB78F; color: #011F26; }
-.c-ciano  { background: #d0edf2; color: #011F26; }
-.c-amber  { background: #F2A71B; color: #011F26; }
-.c-teal   {
-  background: #011F26;
-  color: #F2A71B;
+.c-azul {
+  background: #b3d9e8;
+  color: #011f26;
+}
+.c-rosa {
+  background: #f5c6d0;
+  color: #011f26;
+}
+.c-verde {
+  background: #c2ddb5;
+  color: #011f26;
+}
+.c-amarelo {
+  background: #fde9a6;
+  color: #011f26;
+}
+.c-areia {
+  background: #bfb78f;
+  color: #011f26;
+}
+.c-ciano {
+  background: #d0edf2;
+  color: #011f26;
+}
+.c-amber {
+  background: #f2a71b;
+  color: #011f26;
+}
+.c-teal {
+  background: #011f26;
+  color: #f2a71b;
   font-size: 0.8rem;
   letter-spacing: 0.05em;
-  box-shadow: inset -3px 0 0 #F2A71B;
-}
-
-.footer {
-    background-color: #01242d;
-    padding: 8px 20px;
+  box-shadow: inset -3px 0 0 #f2a71b;
 }
