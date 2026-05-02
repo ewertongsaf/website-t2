@@ -277,6 +277,10 @@ footer {
   text-align: left;
 }
 
+.logo-itajr {
+  width: 150px;
+}
+
 /* --- ESTILOS DAS COLUNAS 2 E 3 (LINKS) --- */
 .footer-coluna h4 {
   color: #fca311; /* Cor dos títulos */
