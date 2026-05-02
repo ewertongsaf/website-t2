@@ -1,0 +1,108 @@
+/* Reset básico para manter o layout limpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Fundo da seção idêntico ao da imagem */
+.members-section {
+    background-color: #f7f9f9; /* Tom de off-white/gelo */
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+.container-members {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Estilos do Cabeçalho */
+.section-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-header h2 {
+    font-size: 2rem;
+    color: #001f3f; /* Azul bem escuro */
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: #007a8c; /* Azul esverdeado/Teal */
+}
+
+/* Grid que organiza os 45 cards magicamente */
+.members-grid {
+    display: grid;
+    /* Isso faz com que os cards se adaptem sozinhos. 
+       No PC ficam 4 por linha, no celular cai para 1 ou 2 */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Estilo individual de cada card */
+.member-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pai-last{
+    display: flex;
+    justify-content: center;
+}
+
+.member-card-last {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 30px;
+}
+
+/* Efeito de hover (opcional, dá um charme quando passa o mouse) */
+.member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* Foto do membro (QUADRADA, conforme pedido) */
+.member-photo {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto 20px auto;
+    /* Se quiser a foto 100% quadrada com quinas secas, mude o border-radius para 0px. 
+       Deixei 8px só pra dar uma leve suavizada nas pontas. */
+    border-radius: 8px; 
+    overflow: hidden;
+    background-color: #e0e0e0; /* Cor de fundo caso a imagem demore a carregar */
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Garante que a foto não fique esticada ou esmagada */
+}
+
+/* Textos dentro do card */
+.member-name {
+    font-size: 1.1rem;
+    color: #001f3f; /* Azul bem escuro */
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.member-role {
+    font-size: 0.9rem;
+    color: #007a8c; /* Azul esverdeado/Teal */
+}
