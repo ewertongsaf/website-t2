@@ -273,6 +273,10 @@ footer {
   max-width: 250px;
 }
 
+.footer-coluna p {
+  text-align: left;
+}
+
 /* --- ESTILOS DAS COLUNAS 2 E 3 (LINKS) --- */
 .footer-coluna h4 {
   color: #fca311; /* Cor dos títulos */
