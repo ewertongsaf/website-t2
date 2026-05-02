@@ -229,14 +229,16 @@
 
   .agenda-content {
     height: auto;
-    min-height: 0;
-    padding-top: 24px;
-    padding-bottom: 40px;
+    min-height: 85dvh;
+    padding-top: 40px;
+    padding-bottom: 60px;
   }
 
   .agenda {
-    width: 100%;
+    width: min(90vw, 90%);
     border-width: 5px;
+    min-height: 420px;
+    padding: 16px;
   }
 
   .secao-do-cronograma {
@@ -253,18 +255,24 @@
   }
 
   .tabela-horario {
-    min-width: 480px;
-    border-spacing: 3px;
+    min-width: 320px;
+    border-spacing: 2px;
+    table-layout: fixed;
   }
 
   .tabela-horario td,
   .tabela-horario thead th,
   .tabela-horario .td-hora {
-    font-size: 0.64rem;
-    padding: 6px 4px;
+    font-size: 0.55rem;
+    padding: 4px 3px;
+    height: 28px;
   }
 
   .tabela-horario td span {
-    font-size: 0.56rem;
+    font-size: 0.48rem;
+  }
+
+  .tabela-horario .linha-intervalo td {
+    height: 6px;
   }
 }
