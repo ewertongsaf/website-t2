@@ -28,6 +28,10 @@ header h3 {
   font-family: outfit-bold;
 }
 
+.container a {
+  text-decoration: none;
+}
+
 .navbar ul {
   display: flex;
   flex-flow: row wrap;
