@@ -28,23 +28,21 @@ const DISCIPLINE_TOTAL_CLASSES = {
 
 // Determina a cor baseada no percentual de faltas e limite
 function getColorStatus(percentage, isWithinLimit, isMaxxed) {
-  if(isMaxxed) {
+  if (isMaxxed) {
     return {
       class: "status-red",
       status: "Crítico",
       message:
         "Você atingiu o limite de faltas! Não pode faltar mais nenhuma aula. Cuidado!",
     };
-  }
-  else if (!isWithinLimit) {
+  } else if (!isWithinLimit) {
     return {
       class: "status-red",
       status: "Crítico",
       message:
         "Você ultrapassou o limite de faltas! Procure a secretaria para regularizar sua situação.",
     };
-  }
-  else if (percentage >= 10) {
+  } else if (percentage >= 10) {
     return {
       class: "status-yellow",
       status: "Atenção",
@@ -63,13 +61,15 @@ function getColorStatus(percentage, isWithinLimit, isMaxxed) {
 function updateCalculator() {
   const selectedDiscipline = disciplineSelect.value;
   const totalClasses = DISCIPLINE_TOTAL_CLASSES[selectedDiscipline] || 0;
-  const currentAbsences = Math.max(0, Number(currentAbsencesInput.value) || 0);
+  // Seleciona faltas dentro do intervalo permitido [0, totalClasses]
+  const rawCurrent = Number(currentAbsencesInput.value) || 0;
+  const currentAbsences = Math.max(0, Math.min(rawCurrent, totalClasses));
   const maxAbsences = Math.floor((totalClasses * LIMIT_PERCENT) / 100);
   const remainingAbsences = Math.max(maxAbsences - currentAbsences, 0);
   const percentage =
     totalClasses > 0 ? (currentAbsences / totalClasses) * 100 : 0;
   const isWithinLimit = currentAbsences < maxAbsences;
-  const isMaxxed = currentAbsences == maxAbsences
+  const isMaxxed = currentAbsences == maxAbsences;
   const colorStatus = getColorStatus(percentage, isWithinLimit, isMaxxed);
 
   selectedTotalOutput.textContent = `Total no semestre: ${totalClasses} aulas`;
@@ -90,6 +90,14 @@ function updateCalculator() {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   updateCalculator();
+});
+
+// Atualiza dinamicamente quando a disciplina for alterada
+disciplineSelect.addEventListener("change", () => {
+  const selectedDiscipline = disciplineSelect.value;
+  const totalClasses = DISCIPLINE_TOTAL_CLASSES[selectedDiscipline] || 0;
+  selectedTotalOutput.textContent = `Total no semestre: ${totalClasses} aulas`;
+  currentAbsencesInput.max = String(totalClasses);
 });
 
 // Inicializa com valores padrão
