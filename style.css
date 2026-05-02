@@ -508,7 +508,7 @@ tr::selection,
 thead::selection,
 tbody::selection,
 span::selection,
-label::selection
+label::selection,
 li::selection,
 a::selection {
   color: #eeb007;
