@@ -49,21 +49,63 @@ h1 {
   color: #F2A71B;
 }
 
+.hero {
+    padding: 78px 0 72px;
+    background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
+}
+
+.hero-content {
+    font-size: 1.2em;
+    width: min(1100px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 0;
+}
+
+.hero-content h1{
+    margin: 0;
+    font-size: clamp(2.2rem, 4.5vw, 4rem);
+    color: #e7e4e4;
+    font-family: outfit-bold;
+}
+
+.hero-content p {
+    max-width: 760px;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #e7e4e4;
+}
+
+.botao {
+    font-size: 1rem;
+    color: #01242d;
+    padding: 10px 16px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+.botao p {
+    margin: 0px 0px 0px 0px;
+}
+
 .agenda-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: linear-gradient(180deg, #025e73 0%, #01404f 100%);
+    /*background-color: #e7e4e4a2; */
     height: 100dvh;
     padding-top: 3dvh;
     padding-bottom: 8dvh;
 }
 
 .agenda {
-    border-radius: 10px;
-    border: 0px;
+    border-radius: 15px;
+    border: 7px solid #025E73;
     box-shadow: -8px 0px #f2a71b;
-    max-width: 1000px;
+    max-width: 788px;
+}
+
+.secao-do-cronograma {
+    padding-bottom: 18dvh;
 }
 
 .cronograma-content {
@@ -71,6 +113,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    /*background-color: #e7e4e4a2; */
     padding-inline: 10px;
     padding-bottom: 4dvh;
 }
@@ -89,10 +132,9 @@ h1 {
 .tabela-scroll {
   overflow-x: auto;
   width: 100%;
-  padding: 4px 4px 4px 4px; /* espaço pro box-shadow esquerdo */
+  padding: 4px 4px 4px 4px;
 }
 
-/* ── Tabela principal ── */
 .tabela-horario {
   border-collapse: separate;
   border-spacing: 4px;
@@ -101,7 +143,6 @@ h1 {
   font-family: outfit-bold;
 }
 
-/* ── Cabeçalho dos dias ── */
 .tabela-horario thead th {
   background-color: #011F26;
   color: #F2A71B;
@@ -119,7 +160,6 @@ h1 {
   min-width: 52px;
 }
 
-/* ── Coluna de horários ── */
 .tabela-horario .td-hora {
   background: #011F26;
   color: #BFB78F;
@@ -132,14 +172,12 @@ h1 {
   min-width: 50px;
 }
 
-/* ── Linha de intervalo ── */
 .tabela-horario .linha-intervalo td {
   height: 10px;
   background: transparent;
   padding: 0;
 }
 
-/* ── Célula genérica ── */
 .tabela-horario td {
   text-align: center;
   padding: 7px 5px;
@@ -163,12 +201,10 @@ h1 {
   filter: brightness(1.12);
 }
 
-/* ── Célula vazia ── */
 .tabela-horario .vazio {
   background: rgba(1, 31, 38, 0.5);
 }
 
-/* ── Paleta de células ── */
 .c-azul   { background: #b3d9e8; color: #011F26; }
 .c-rosa   { background: #f5c6d0; color: #011F26; }
 .c-verde  { background: #c2ddb5; color: #011F26; }
@@ -182,4 +218,9 @@ h1 {
   font-size: 0.8rem;
   letter-spacing: 0.05em;
   box-shadow: inset -3px 0 0 #F2A71B;
+}
+
+.footer {
+    background-color: #01242d;
+    padding: 8px 20px;
 }
