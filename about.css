@@ -162,11 +162,12 @@
   }
 
   .contrib-placeholder {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 12px 0;
   }
 
   .cartao-foto figcaption {
-    font-size: 0.9rem;
+    font-size: 0.82rem;
   }
 }

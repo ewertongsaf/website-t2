@@ -329,6 +329,11 @@ footer {
   transition: all 0.3s ease;
 }
 
+.icone i {
+  line-height: 1;
+  font-size: 1rem;
+}
+
 .icone:hover {
   background-color: #fca311;
   color: #03252e;
@@ -412,13 +417,13 @@ a::selection {
   }
 
   .navbar ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
     width: 100%;
     padding: 0;
     margin: 0;
-    gap: 15px;
+    gap: 10px;
   }
 
   .navbar ul li {
@@ -450,16 +455,19 @@ a::selection {
   }
 
   .boxcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
     gap: 12px;
-    align-items: stretch;
-    justify-content: center;
   }
 
   .box {
-    flex: 1 1 160px;
     min-width: 0;
     padding: 8px 10px 12px;
+  }
+
+  .box:last-child {
+    grid-column: 1 / -1;
   }
 
   .box h2 {
@@ -475,7 +483,8 @@ a::selection {
   }
 
   .footer-container {
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     align-items: stretch;
     gap: 24px;
   }
@@ -483,6 +492,10 @@ a::selection {
   .footer-coluna {
     width: 100%;
     min-width: 0;
+  }
+
+  .footer-coluna:nth-child(3) {
+    grid-column: 1 / -1;
   }
 
   .marca-header {
