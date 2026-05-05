@@ -62,7 +62,7 @@ function updateCalculator() {
   // Seleciona faltas dentro do intervalo permitido [0, totalClasses]
   const rawCurrent = Number(currentAbsencesInput.value) || 0;
   const currentAbsences = Math.max(0, Math.min(rawCurrent, totalClasses));
-  const maxAbsences = Math.floor((totalClasses * LIMIT_PERCENT) / 100);
+  const maxAbsences = Math.ceil((totalClasses * LIMIT_PERCENT) / 100);
   const remainingAbsences = Math.max(maxAbsences - currentAbsences, 0);
   const percentage =
     totalClasses > 0 ? (currentAbsences / totalClasses) * 100 : 0;
