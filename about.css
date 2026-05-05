@@ -84,49 +84,44 @@
   color: #60727a;
 }
 
-/* O Container Principal */
 .contrib-placeholder {
   display: grid;
-  /* A linha abaixo é o grande segredo da responsividade: */
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 24px; /* Espaço entre as fotos */
+  grid-template-columns: repeat(2, minmax(300px, 1fr));
+  gap: 24px;
   max-width: 100%;
-  padding: 20px 0; /* Um respiro em cima e embaixo */
+  padding: 20px;
 }
 
-/* O Cartão que segura a foto e o texto */
 .cartao-foto {
-  margin: 0; /* Reseta a margem padrão do figure */
-  background-color: #f9f9f9; /* Uma cor de fundo suave para o texto */
-  border-radius: 8px; /* Cantos arredondados, fica bem moderno */
-  overflow: hidden; /* Garante que a foto não vaze dos cantos arredondados */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); /* Uma sombrinha leve */
+  margin: 0; 
+  background-color: #f9f9f9; 
+  border-radius: 8px; 
+  overflow: hidden; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05); 
   height: 100%;
 }
 
-/* A Imagem */
 .cartao-foto img {
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain; /* Garante que a foto toda apareça */
+  object-fit: contain; 
 }
 
-/* A Descrição */
 .cartao-foto figcaption {
   padding: 16px;
   text-align: center;
   font-size: 14px;
   color: #333;
-  flex-grow: 1; /* Faz o texto preencher o espaço restante */
-  word-wrap: break-word; /* Garante que palavras longas quebrem a linha */
+  flex-grow: 1; 
+  word-wrap: break-word; 
 }
 
 .cartao-foto {
   transition: transform 0.3s ease;
 }
 .cartao-foto:hover {
-  transform: translateY(-5px); /* Dá um pulinho para cima */
+  transform: translateY(-5px); 
 }
 
 .page-hero {
@@ -162,11 +157,12 @@
   }
 
   .contrib-placeholder {
-    grid-template-columns: 1fr;
-    gap: 18px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    padding: 12px;
   }
 
   .cartao-foto figcaption {
-    font-size: 0.9rem;
+    font-size: 0.72rem;
   }
 }

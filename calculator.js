@@ -13,12 +13,10 @@ const LIMIT_PERCENT = 15; // Limite fixo de 15%
 
 // Carga horaria fixa por disciplina neste semestre (pode ser ajustada depois).
 const DISCIPLINE_TOTAL_CLASSES = {
-  "CES-10": 64,
-  "CES-10 (L)": 32,
+  "CES-10": 96,
   "MTP-03": 32,
   "HUM-01": 48,
-  "QUI-18": 32,
-  "QUI-18 (L)": 48,
+  "QUI-18": 80,
   "MAT-13": 64,
   "MAT-15": 32,
   "MAT-17": 32,
@@ -64,7 +62,7 @@ function updateCalculator() {
   // Seleciona faltas dentro do intervalo permitido [0, totalClasses]
   const rawCurrent = Number(currentAbsencesInput.value) || 0;
   const currentAbsences = Math.max(0, Math.min(rawCurrent, totalClasses));
-  const maxAbsences = Math.floor((totalClasses * LIMIT_PERCENT) / 100);
+  const maxAbsences = Math.ceil((totalClasses * LIMIT_PERCENT) / 100);
   const remainingAbsences = Math.max(maxAbsences - currentAbsences, 0);
   const percentage =
     totalClasses > 0 ? (currentAbsences / totalClasses) * 100 : 0;

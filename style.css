@@ -339,12 +339,15 @@ div:has(> .logo-itajr) {
 
 .box-contact {
   display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .icone {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 0 0 40px;
   width: 40px;
   height: 40px;
   background-color: #143840; /* Fundo dos botões sociais */
@@ -353,6 +356,12 @@ div:has(> .logo-itajr) {
   border-radius: 8px;
   font-size: 1.1rem;
   transition: all 0.3s ease;
+}
+
+.icone i {
+  display: block;
+  line-height: 1;
+  font-size: 0.95rem;
 }
 
 .icone:hover {
@@ -364,7 +373,89 @@ div:has(> .logo-itajr) {
 .email {
   font-size: 0.95rem;
   color: #cbd5e1;
-  margin-left: 10px;
+  margin-left: 0;
+}
+
+.cartao-foto img,
+.member-photo img {
+  cursor: zoom-in;
+}
+
+body.photo-lightbox-open {
+  overflow: hidden;
+}
+
+.photo-lightbox {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 9999;
+}
+
+.photo-lightbox.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.photo-lightbox__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(1, 36, 45, 0.84);
+  backdrop-filter: blur(8px);
+}
+
+.photo-lightbox__panel {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 12px;
+  width: min(920px, 100%);
+  margin: 0;
+  padding: 16px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 30px 90px rgba(0, 0, 0, 0.35);
+}
+
+.photo-lightbox__image {
+  display: block;
+  width: 100%;
+  max-height: 72vh;
+  object-fit: contain;
+  border-radius: 16px;
+  background: #eaf2f4;
+}
+
+.photo-lightbox__caption {
+  margin: 0;
+  color: #01242d;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.photo-lightbox__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 38px;
+  height: 38px;
+  border: 0;
+  border-radius: 999px;
+  background: rgba(1, 36, 45, 0.1);
+  color: #01242d;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.photo-lightbox__close:hover {
+  background: rgba(1, 36, 45, 0.16);
 }
 
 /* --- ESTILOS DA BASE (DIREITOS AUTORAIS) --- */
@@ -412,6 +503,12 @@ h4::selection,
 pre::selection,
 h5::selection,
 div::selection,
+td::selection,
+tr::selection,
+thead::selection,
+tbody::selection,
+span::selection,
+label::selection,
 li::selection,
 a::selection {
   color: #eeb007;
@@ -438,13 +535,13 @@ a::selection {
   }
 
   .navbar ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
     width: 100%;
     padding: 0;
     margin: 0;
-    gap: 15px;
+    gap: 10px;
   }
 
   .navbar ul li {
@@ -476,16 +573,19 @@ a::selection {
   }
 
   .boxcontainer {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     width: 100%;
     gap: 12px;
-    align-items: stretch;
-    justify-content: center;
   }
 
   .box {
-    flex: 1 1 160px;
     min-width: 0;
     padding: 8px 10px 12px;
+  }
+
+  .box:last-child {
+    grid-column: 1 / -1;
   }
 
   .box h2 {
@@ -493,17 +593,18 @@ a::selection {
   }
 
   .footer {
-    padding: 16px 14px;
+    padding: 12px 14px;
   }
 
   footer {
-    padding: 36px 16px 18px;
+    padding: 24px 16px 14px;
   }
 
   .footer-container {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 24px;
+    gap: 12px;
   }
 
   .footer-coluna {
@@ -513,15 +614,67 @@ a::selection {
 
   .marca-header {
     align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .logo-box {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+
+  .marca-texto h3 {
+    font-size: 1rem;
   }
 
   .descricao {
     max-width: none;
+    font-size: 0.86rem;
+    margin: 0;
+  }
+
+  .footer-coluna h4 {
+    margin-bottom: 10px;
+    font-size: 0.95rem;
+  }
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 12px;
+  }
+
+  .footer-links li {
+    margin-bottom: 0;
+  }
+
+  .footer-links a {
+    display: block;
+    line-height: 1.25;
+    font-size: 0.84rem;
+    overflow-wrap: anywhere;
   }
 
   .box-contact {
     align-items: center;
-    gap: 10px;
+    gap: 8px;
+  }
+
+  .icone {
+    width: 36px;
+    height: 36px;
+    flex-basis: 36px;
+    border-radius: 7px;
+    font-size: 1rem;
+  }
+
+  .icone i {
+    font-size: 0.9rem;
+  }
+
+  .email {
+    font-size: 0.82rem;
+    line-height: 1.2;
   }
 
   .email {
@@ -540,6 +693,25 @@ a::selection {
   }
 
   .footer-base {
-    margin-top: 32px;
+    margin-top: 18px;
+    padding-top: 14px;
+    font-size: 0.78rem;
+  }
+
+  .photo-lightbox {
+    padding: 16px;
+  }
+
+  .photo-lightbox__panel {
+    padding: 12px;
+    border-radius: 18px;
+  }
+
+  .photo-lightbox__image {
+    max-height: 62vh;
+  }
+
+  .photo-lightbox__caption {
+    font-size: 0.9rem;
   }
 }
