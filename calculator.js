@@ -13,12 +13,10 @@ const LIMIT_PERCENT = 15; // Limite fixo de 15%
 
 // Carga horaria fixa por disciplina neste semestre (pode ser ajustada depois).
 const DISCIPLINE_TOTAL_CLASSES = {
-  "CES-10": 64,
-  "CES-10 (L)": 32,
+  "CES-10": 96,
   "MTP-03": 32,
   "HUM-01": 48,
-  "QUI-18": 32,
-  "QUI-18 (L)": 48,
+  "QUI-18": 80,
   "MAT-13": 64,
   "MAT-15": 32,
   "MAT-17": 32,
